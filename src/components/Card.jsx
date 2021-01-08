@@ -4,7 +4,7 @@ import {Card, } from 'react-bootstrap';
 class Cardcomp extends React.Component{
     render(){
         return(
-            <Card style={{ width: '18rem' }}>
+            <Card className='mb-3' border="light">
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Some Caption</Card.Subtitle>

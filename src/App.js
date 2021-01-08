@@ -1,39 +1,42 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import { Container, Row, Col } from 'react-bootstrap';
 import { AlertDismissibleExample, Navibar, Jumbotroncomp, Cardcomp, Footer} from './components/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './App.module.css';
+import styles from './components/cardalignment.module.css';
 
 function App() {
   return (
-    <Container  fluid="xl" className = "pl-5 pr-5 mt-3">
-      <Container className = "pl-5 pr-5">
+    <Container className="p-3">
+    <Container className = "m-auto p-auto">
+    <Container fluid="lg">
         <AlertDismissibleExample loading="lazy" />
-        <Jumbotroncomp loading="lazy" />
+        <Jumbotroncomp loading="lazy"/>
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Some Projects</li>
+          <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item active text-dark" aria-current="page">Some Projects</li>
           </ol>
         </nav>
-        <Row>
-          <Col><Cardcomp /> </Col>
-          <Col><Cardcomp /> </Col>
-          <Col><Cardcomp /> </Col>
+        <Row xs={1} md={3}>
+        <Col xs><Cardcomp  /></Col>
+        <Col xs><Cardcomp /></Col>
+        <Col xs><Cardcomp /></Col>
         </Row>
-
         <nav aria-label="breadcrumb" class="mt-4">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Some Stuffs (Maybe) </li>
+        <ol class="breadcrumb bg-light">
+        <li class="breadcrumb-item active text-dark" aria-current="page">Some Stuffs </li>
           </ol>
         </nav>
-        <Row>
-          <Col><Cardcomp /> </Col>
-          <Col><Cardcomp /> </Col>
-          <Col><Cardcomp /> </Col>
+        <Row xs={1} md={4}>
+        <Col xs><Cardcomp /></Col>
+        <Col xs><Cardcomp /></Col>
+        <Col xs><Cardcomp /></Col>
+        <Col xs><Cardcomp /></Col>
         </Row>
         <Footer />
       </Container>
-    </Container>
+      </Container>
+      </Container>
   );
 }
 export default App;

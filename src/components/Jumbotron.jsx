@@ -4,7 +4,7 @@ import {Jumbotron, } from 'react-bootstrap';
 class Jumbotroncomp extends React.Component{
     render(){
         return(
-            <Jumbotron>
+            <Jumbotron className="bg-light">
             <h1>Hello, My Name is Martin!</h1>
             <p>
             I am Martin, a tech enthusiast who loves play game and news about cutting-edge tech.
